@@ -1,0 +1,27 @@
+{% extends "bootstrap/base.html" %}
+
+
+{% block title %} Raspberry Zero W NoIR-Camera {% endblock %}
+
+
+{% block content %}
+  <div class="container">
+    <h1>NoIR Image from Raspberry Pi Zero W</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <img src="{{ url_for('static', filename='image.png') }}"> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <form action="{{ url_for('take_picture') }}">
+          <div class="form-group">
+            <button class="btn btn-primary">Take Picture</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
